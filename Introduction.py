@@ -16,7 +16,7 @@ df['Sexe'] = df['Sexe'].str.strip()
 st.sidebar.header("")
 st.title('Dashboard: Officially Registered French Athletes in 2015')
 st.write('### We are going to analyse a dataset of officially registered French athletes in 2015. The dataset is available on the website of the French Publicly Accessible Data.')
-st.write('Dataset name: "Athlètes inscrits sur la liste des sportifs de haut niveau en 2015"')
+st.write('https://www.data.gouv.fr/fr/datasets/athletes-inscrits-sur-la-liste-des-sportifs-de-haut-niveau-en-2015/')
 st.markdown("<br>", unsafe_allow_html=True)
 
 st.write('Here is the first 5 rows of the dataset:', df.head())
