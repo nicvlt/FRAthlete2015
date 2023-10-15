@@ -4,7 +4,7 @@ Streamlit dashboard to analyse a dataset of officially registered French athlete
 ### Installation
 Make sure you have the following modules installed:
 ```
-pip install streamlit numpy pandas seaborn matplotlib plotly folium streamlit_folium pydeck
+pip install -r requirements.txt
 ```
 If you have all the modules installed, you can run this in the CMD:
 ```
