@@ -205,7 +205,7 @@ elif option == 'Density by Department':
     ).add_to(m)
 
     fo.LayerControl().add_to(m)
-    folium_static(m, width=1500, height=800)
+    folium_static(m, width=1000, height=800)
     
     if st.checkbox('Show departments dataframe'):
         st.dataframe(departements, use_container_width=True)
