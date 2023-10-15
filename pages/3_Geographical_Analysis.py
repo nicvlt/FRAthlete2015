@@ -221,7 +221,6 @@ elif option == 'Density by Department (with Federations and Disciplines)':
         )
         
         all_disciplines_by_federation = df[df['FedNom'] == federation_choice]['Discipline'].unique()
-        # create radio buttons for the disciplines, if the federation has only one discipline, we don't add 'All' as a choice
         if len(all_disciplines_by_federation) == 1:
             discipline_choice = all_disciplines_by_federation[0]
             """There is only one discipline for this federation"""
