@@ -11,7 +11,13 @@ def load_data():
 
     return df
 
-def side_bar(text):
+def side_bar(title):
 
-    st.sidebar.header("#Dataviz2023efrei")
-    st.sidebar.header("*by [Nicolas VIOLOT](https://www.linkedin.com/in/nicolasviolot/)*")
+    # make a markdown text with as title the argument 'title'. Add a section break after the title and add "Author: " as text with a link to my LinkedIn profile https://www.linkedin.com/in/nicolasviolot/ clickable on my name.
+    st.sidebar.markdown(f'# {title}')
+    st.sidebar.markdown('# Author')
+    st.sidebar.markdown('This dashboard was made by [Nicolas VIOLOT](https://www.linkedin.com/in/nicolasviolot/).')
+    st.sidebar.markdown('# More information')
+    st.sidebar.markdown('[My GitHub profile](https://github.com/nicvlt)')
+    st.sidebar.markdown('[Repo of this project](https://github.com/nicvlt/FRAthlete2015)')
+    st.sidebar.markdown('#DataViz2023EFREI')
