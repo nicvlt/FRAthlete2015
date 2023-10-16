@@ -2,13 +2,7 @@ import streamlit as st
 import pandas as pd
 import plotly.figure_factory as ff
 import plotly.express as px
-
-# Data import and cleaning
-df = pd.read_excel('assets/SHN_2015.xlsx', engine='openpyxl')
-df = df.drop(['SHN_Id'], axis=1)
-df = df.dropna(subset=['Club'])
-df['Sexe'] = df['Sexe'].astype(str)
-df['Sexe'] = df['Sexe'].str.strip()
+from utils import load_data
 
 # Page config
 st.set_page_config(
@@ -17,6 +11,9 @@ st.set_page_config(
     layout="wide"
 )
 st.sidebar.header("👴 Age Analysis")
+
+# Load data
+df = load_data()
 
 # Page content
 col1, col2 = st.columns([1, 1])

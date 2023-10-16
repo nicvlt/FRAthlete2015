@@ -5,13 +5,7 @@ import pydeck as pdk
 import numpy as np
 import folium as fo
 from streamlit_folium import folium_static
-
-# Data import and cleaning
-df = pd.read_excel('assets/SHN_2015.xlsx', engine='openpyxl')
-df = df.drop(['SHN_Id'], axis=1)
-df = df.dropna(subset=['Club'])
-df['Sexe'] = df['Sexe'].astype(str)
-df['Sexe'] = df['Sexe'].str.strip()
+from utils import load_data
 
 # Page config
 st.set_page_config(
@@ -20,6 +14,9 @@ st.set_page_config(
     layout="wide"
 )
 st.sidebar.header("🌍 Geographical Analysis")
+
+# Load data
+df = load_data()
 
 # Geojson data import and cleaning
 geojson_path = 'assets/departements.geojson'

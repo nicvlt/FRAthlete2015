@@ -3,13 +3,7 @@ import seaborn as sns
 import matplotlib.pyplot as plt
 import plotly.express as px
 import pandas as pd
-
-# Data import and cleaning
-df = pd.read_excel('assets/SHN_2015.xlsx', engine='openpyxl')
-df = df.drop(['SHN_Id'], axis=1)
-df = df.dropna(subset=['Club'])
-df['Sexe'] = df['Sexe'].astype(str)
-df['Sexe'] = df['Sexe'].str.strip()
+from utils import load_data
 
 # Page config
 st.set_page_config(
@@ -18,6 +12,9 @@ st.set_page_config(
     layout="wide"
 )
 st.sidebar.header("👥 Gender Analysis")
+
+# Load data
+df = load_data()
 
 # Page content
 st.write('## Single Variable Analysis')

@@ -1,19 +1,15 @@
 import streamlit as st
 import pandas as pd
+from utils import load_data
+
 
 st.set_page_config(
     page_title="Introduction",
     page_icon="🧠",
 )
 st.sidebar.header("🧠 Introduction")
+df = load_data()
 
-df = pd.read_excel('assets/SHN_2015.xlsx', engine='openpyxl')
-df = df.drop(['SHN_Id'], axis=1)
-df = df.dropna(subset=['Club'])
-df['Sexe'] = df['Sexe'].astype(str)
-df['Sexe'] = df['Sexe'].str.strip()
-
-st.sidebar.header("")
 st.title('Dashboard: Officially Registered French Athletes in 2015')
 st.write('### We are going to analyse a dataset of officially registered French athletes in 2015. The dataset is available on the website of the French Publicly Accessible Data.')
 st.write('https://www.data.gouv.fr/fr/datasets/athletes-inscrits-sur-la-liste-des-sportifs-de-haut-niveau-en-2015/')
