@@ -5,7 +5,7 @@ import pydeck as pdk
 import numpy as np
 import folium as fo
 from streamlit_folium import folium_static
-from utils import load_data
+from utils import load_data, side_bar
 
 # Page config
 st.set_page_config(
@@ -13,7 +13,7 @@ st.set_page_config(
     page_icon="🌍",
     layout="wide"
 )
-st.sidebar.header("🌍 Geographical Analysis")
+side_bar("🌍 Geographical Analysis")
 
 # Load data
 df = load_data()

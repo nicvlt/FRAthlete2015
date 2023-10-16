@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 import plotly.figure_factory as ff
 import plotly.express as px
-from utils import load_data
+from utils import load_data, side_bar
 
 # Page config
 st.set_page_config(
@@ -10,7 +10,7 @@ st.set_page_config(
     page_icon="👴",
     layout="wide"
 )
-st.sidebar.header("👴 Age Analysis")
+side_bar("👴 Age Analysis")
 
 # Load data
 df = load_data()

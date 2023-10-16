@@ -3,7 +3,7 @@ import seaborn as sns
 import matplotlib.pyplot as plt
 import plotly.express as px
 import pandas as pd
-from utils import load_data
+from utils import load_data, side_bar
 
 # Page config
 st.set_page_config(
@@ -11,7 +11,7 @@ st.set_page_config(
     page_icon="👥",
     layout="wide"
 )
-st.sidebar.header("👥 Gender Analysis")
+side_bar("👥 Gender Analysis")
 
 # Load data
 df = load_data()

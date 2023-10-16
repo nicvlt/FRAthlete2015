@@ -10,3 +10,8 @@ def load_data():
     df['Sexe'] = df['Sexe'].str.strip()
 
     return df
+
+def side_bar(text):
+
+    st.sidebar.header("#Dataviz2023efrei")
+    st.sidebar.header("*by [Nicolas VIOLOT](https://www.linkedin.com/in/nicolasviolot/)*")
