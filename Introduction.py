@@ -1,13 +1,13 @@
 import streamlit as st
 import pandas as pd
-from utils import load_data
+from utils import load_data, side_bar
 
 
 st.set_page_config(
     page_title="Introduction",
     page_icon="🧠",
 )
-st.sidebar.header("🧠 Introduction")
+side_bar('🧠 Introduction')
 df = load_data()
 
 st.title('Dashboard: Officially Registered French Athletes in 2015')
